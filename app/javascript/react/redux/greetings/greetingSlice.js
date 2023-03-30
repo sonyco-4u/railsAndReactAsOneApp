@@ -27,7 +27,11 @@ const greetingSlice = createSlice({
         return newState;
       })
       .addCase(fetchGreetings.rejected, (state) => {
-        const newState = { ...state, error: 'Error 404. Failed to fetch', loading: false };
+        const newState = {
+          ...state,
+          error: 'Error 404. Failed to fetch',
+          loading: false,
+        };
         return newState;
       });
   },
